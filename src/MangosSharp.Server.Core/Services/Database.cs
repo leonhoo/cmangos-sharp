@@ -55,9 +55,9 @@ public sealed class Database : IDatabase
         _dbCtors = new Dictionary<Type, Func<object>>
         {
             { typeof(ClassiccharactersDbContext), () => new ClassiccharactersDbContext(_characterDbOptions) },
-            { typeof(ClassiclogsDbContext), () => new ClassiccharactersDbContext(_logsDbOptions) },
-            { typeof(ClassicmangosDbContext), () => new ClassiccharactersDbContext(_mangosDbOptions) },
-            { typeof(ClassicrealmdDbContext), () => new ClassiccharactersDbContext(_realmDbOptions) },
+            { typeof(ClassiclogsDbContext), () => new ClassiclogsDbContext(_logsDbOptions) },
+            { typeof(ClassicmangosDbContext), () => new ClassicmangosDbContext(_mangosDbOptions) },
+            { typeof(ClassicrealmdDbContext), () => new ClassicrealmdDbContext(_realmDbOptions) },
             { typeof(ClientDbContext), () => new ClientDbContext(_logger, _memoryCache) }
         };
     }
